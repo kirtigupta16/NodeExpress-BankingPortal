@@ -50,7 +50,7 @@ app.post('/transfer', (req,res) => {
 app.get('/payment',(req,res) => res.render('payment',{account:accounts.credit
 }));
 app.post('/payment',(req,res) => {
-  accounts.creditbalance -= req.body.amount;
+  accounts.credit.balance -= req.body.amount;
   accounts.credit.availaible += parseInt(req.body.amount , 10);
     const accountsJSON  = JSON.stringify(accounts, null , 4);
     fs.writeFileSync(path.join(__dirname,'json','accounts.json'),accountsJSON,'utf8');
