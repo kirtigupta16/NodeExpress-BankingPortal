@@ -28,7 +28,7 @@ app.get('/', (req,res) => {
 });
 
 app.use('/account', accountRoutes);
-app.use('/services', serviceRoutes);
+app.use('/services', servicesRoutes);
 // app.get('/savings', (req , res) =>{
 //   res.render('account',{ account:accounts.savings})
 // });
